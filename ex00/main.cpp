@@ -2,7 +2,7 @@
 #include <iostream>
 #include <cassert>
 
-void test_swap( void ) {
+void testSwap( void ) {
 	int a = 2, b = 3;
 	::swap(a, b);
 	assert(a == 3 && b == 2);
@@ -12,7 +12,7 @@ void test_swap( void ) {
 	assert(c == "chaine2" && d == "chaine1");
 }
 
-void test_min( void ) {
+void testMin( void ) {
 	int a = 2, b = 3;
 	assert(::min(a, b) == a);
 
@@ -20,7 +20,7 @@ void test_min( void ) {
 	assert(::min(c, d) == c);
 }
 
-void test_max( void ) {
+void testMax( void ) {
 	int a = 2, b = 3;
 	assert(::max(a, b) == b);
 
@@ -29,9 +29,9 @@ void test_max( void ) {
 }
 
 int main( void ) {
-	test_swap();
-	test_min();
-	test_max();
+	testSwap();
+	testMin();
+	testMax();
 
 	std::cout << "All tests passed!" << std::endl;
 	return 0;

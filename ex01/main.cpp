@@ -13,7 +13,7 @@ void increment(T const &x) {
 	const_cast<T &>(x)++;
 }
 
-void test_intArray( void ) {
+void testIntArray( void ) {
     int intArray[] = {1, 2, 3, 4, 5};
     std::ostringstream oss;
     std::streambuf *coutbuf = std::cout.rdbuf(oss.rdbuf());
@@ -26,7 +26,7 @@ void test_intArray( void ) {
     assert(oss.str() == expected);
 }
 
-void test_strArray( void ) {
+void testStrArray( void ) {
     std::string strArray[] = {"one", "two", "three", "four", "five"};
     std::ostringstream oss;
     std::streambuf *coutbuf = std::cout.rdbuf(oss.rdbuf());
@@ -39,7 +39,7 @@ void test_strArray( void ) {
     assert(oss.str() == expected);
 }
 
-void test_incrementArray( void ) {
+void testIncrementArray( void ) {
     int intArray[] = {1, 2, 3, 4, 5};
     iter(intArray, 5, increment);
 
@@ -50,9 +50,9 @@ void test_incrementArray( void ) {
 }
 
 int main( void ) {
-    test_intArray();
-    test_strArray();
-    test_incrementArray();
+    testIntArray();
+    testStrArray();
+    testIncrementArray();
     std::cout << "All tests passed!" << std::endl;
     return 0;
 }
